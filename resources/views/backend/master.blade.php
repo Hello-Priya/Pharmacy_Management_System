@@ -38,10 +38,11 @@
 </head>
 
 <body>
-
+main id="main" class="main">
+ 
 @include('backend.partial.header')
 @include('backend.partial.sidebar')
-<div class="pagetitle">
+ <div class="pagetitle">
   <h1>Dashboard</h1>
   <nav>
     <ol class="breadcrumb">
@@ -50,13 +51,11 @@
     </ol>
   </nav>
 </div><!-- End Page Title -->
-@yield('content')
+ @yield('content')
 
-</main><!-- End #main -->
-
-@include('backend.partial.footer')
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ @include('backend.partial.footer')
+ 
+ <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{{url('backend/assets/vendor/apexcharts/apexcharts.min.js')}}"></script>

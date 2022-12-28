@@ -14,4 +14,6 @@ class AdminController extends Controller
     public function Content(){
         return view('backend.partial.content');
     }
+
+    
 }
