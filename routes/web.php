@@ -15,7 +15,7 @@ use App\Http\Controllers\backend\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('master');
+    return view('backend.master');
 });
 
 Route::get('/admin_panel',[AdminController::class,'Dashboard'])-> name('Admin');
@@ -27,7 +27,6 @@ Route::post('/database_list',[CategoryController::class,'Data'])-> name('databas
 
 
 Route::get('/Create_form',[CategoryController::class,'cform'])-> name('cform');
-
-//Route::post('/View_table',[CategoryController::class,'View'])-> name('View');
-//Route::get('/Delete_form',[CategoryController::class,'Delete'])-> name('delete');
-//Route::Put('/Update_form',[CategoryController::class,'Update'])-> name('update');
+Route::get('/Delete_form/{id}',[CategoryController::class,'Delete'])-> name('delete');
+Route::get('/Edit_form/{id}',[CategoryController::class,'Edit'])-> name('edit');
+Route::Put('/Update_form/{id}',[CategoryController::class,'Update'])-> name('update');
