@@ -11,11 +11,27 @@
   </li><!-- End Dashboard Nav -->
 
   <li class="nav-item">
-    <a class="nav-link " href="{{url('Category_list')}}">
+    <a class="nav-link " href="{{route('cform')}}">
       <i class="bi bi-grid"></i>
       <span>CategoryList</span>
     </a>
   </li><!-- End Dashboard Nav -->
+
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('View')}}">
+      <i class="bi bi-grid"></i>
+      <span>Product</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('Purchase_view')}}">
+      <i class="bi bi-grid"></i>
+      <span>Purchase</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
 
   <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">

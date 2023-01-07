@@ -38,10 +38,10 @@
 </head>
 
 <body>
-main id="main" class="main">
  
 @include('backend.partial.header')
 @include('backend.partial.sidebar')
+
  <div class="pagetitle">
   <h1>Dashboard</h1>
   <nav>
@@ -51,7 +51,11 @@ main id="main" class="main">
     </ol>
   </nav>
 </div><!-- End Page Title -->
- @yield('content')
+<br>
+<br>
+<br>
+@yield('content')
+
 
  @include('backend.partial.footer')
  

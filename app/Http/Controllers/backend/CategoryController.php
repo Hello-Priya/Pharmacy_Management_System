@@ -43,7 +43,7 @@ $request->validate([
 
 
   public function cform(){
-    $Customers = CategoryList::all();
+    $Customers = CategoryList::paginate(4);
     return view('backend.pages.category.Cform',compact('Customers'));
   }
 
