@@ -29,7 +29,7 @@
     <td class="bg-primary" scope="row">{{$customer->Stock_Out}}</td>
     <td>
     <a href="{{route('edit',$customer->id)}}" class="btn btn-info">Edit</a>
-    <a href="{{route('delete',$customer->id)}}" class="btn btn-danger">Delete</a>
+    <a href="{{route('delete-form',$customer->id)}}" class="btn btn-danger">Delete</a>
 
     </td>
     </tr>

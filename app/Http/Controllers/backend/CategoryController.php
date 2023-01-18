@@ -38,11 +38,11 @@ $request->validate([
         'Stock_Out' => $request->Stock_Out,
     ]);
 
-    return redirect(url('Create_form'));
+    return redirect(url('create_form'));
 }
 
 
-  public function cform(){
+  public function create(){
     $Customers = CategoryList::paginate(4);
     return view('backend.pages.category.Cform',compact('Customers'));
   }
@@ -69,7 +69,7 @@ public function Update(Request $request , $id){
     'In_Stock' => $request->In_Stock,
     'Stock_Out' => $request->Stock_Out
   ]);
-  return redirect()->route('cform'); 
+  return redirect()->route('create'); 
 
 }
 }

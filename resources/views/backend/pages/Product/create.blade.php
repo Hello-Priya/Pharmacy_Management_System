@@ -37,6 +37,15 @@
 @enderror
  </div>
   </div>
+  <div class="form-group">
+    <label for="">Company Name</label>
+<select class="form-control form-select" name="company_id" id="company_id"> 
+   @foreach($companies as $company)
+  <option value="{{$company->id}}">{{$company->Company_Name}}</option>
+  @endforeach
+</select>
+  
+  </div>
 
   <div class="form-group">
     <label for="pwd">Type:</label>

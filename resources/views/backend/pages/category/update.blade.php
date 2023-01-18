@@ -3,11 +3,12 @@
 
 <h1 class="text-center">Medicine_Category</h1>
 <div class="container">
-<a href="{{route('cform')}}" class="btn btn-info">Form</a>
+<a href="{{route('category')}}" class="btn btn-info">Form</a>
 <br></br>
 <form class="form" action="{{route('update',$CustomerEdit->id)}}" method="POST">
-  @method('PUT')
+@method('PUT')
     @csrf
+
     <div class="form-group">
     <label for="text">SL_NO:</label>
     <input type="number" class="form-control" id="number" Name="SL_NO">

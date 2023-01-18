@@ -11,9 +11,16 @@
   </li><!-- End Dashboard Nav -->
 
   <li class="nav-item">
-    <a class="nav-link " href="{{route('cform')}}">
+    <a class="nav-link " href="{{route('viewform')}}">
       <i class="bi bi-grid"></i>
-      <span>CategoryList</span>
+      <span>Customer</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('create')}}">
+      <i class="bi bi-grid"></i>
+      <span>Category</span>
     </a>
   </li><!-- End Dashboard Nav -->
 
@@ -31,6 +38,24 @@
       <span>Purchase</span>
     </a>
   </li><!-- End Dashboard Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('Create-form')}}">
+      <i class="bi bi-grid"></i>
+      <span>Company</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('view_form')}}">
+      <i class="bi bi-grid"></i>
+      <span>Payment</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  
+
+
 
 
   <li class="nav-item">

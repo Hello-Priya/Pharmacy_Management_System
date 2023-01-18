@@ -14,6 +14,7 @@
     <tr>
       <th class="bg-primary" scope="col">SL_NO</th>
       <th class="bg-primary" scope="col">Name</th>
+      <th class="bg-primary" scope="col">Company_Name</th>
       <th class="bg-primary" scope="col">Product_image</th>
       <th class="bg-primary" scope="col">Type</th>
       <th class="bg-primary" scope="col">Price</th>
@@ -26,6 +27,7 @@
     <tr>
     <td class="bg-primary" scope="row">{{$product->id}}</td>
     <td class="bg-primary" scope="row">{{$product->Name}}</td>
+    <td class="bg-primary" scope="row">{{$product->$companies->Company_Name}}</td>
     <td><img width="70px" src="{{ url('/uploads/product/',$product->Product_image) }}" alt="" srcset=""></td>
     <td class="bg-primary" scope="row">{{$product->Type}}</td>
     <td class="bg-primary" scope="row">{{$product->Price}}</td>

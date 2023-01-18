@@ -2,10 +2,10 @@
 @section('content')
 
 <h1 class="text-center">Medicine_Category</h1>
-<h1><a href="{{route('cform')}}"></a></h1>
+<h1><a href="{{route('create')}}"></a></h1>
 <div class="container">
 
-<form class="form" action="{{route('database')}}" method="POST">
+<form class="form" action="{{route('database_submit')}}" method="POST">
     @csrf
     <div class="form-group">
     <label for="text">SL_NO:</label>

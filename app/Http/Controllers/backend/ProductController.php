@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers\backend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Company;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
     public function Med_Product(){
-        return view('backend.pages.Product.create');
+
+        $companies=Company::all();
+        return view('backend.pages.Product.create',compact('companies'));
 
     }
 
     public function Product(Request $request){
-
 
         $fileName = null;
         if($request->hasFile('Product_image')){
@@ -28,6 +30,7 @@ class ProductController extends Controller
 
         'SL_NO' => $request->SL_NO,
         'Name' => $request->Name,
+        'company_id'=>$request->company_id,
         'Type' => $request->Type,
         'Price' => $request->Price,
         'Product_Details' => $request->Product_Details,

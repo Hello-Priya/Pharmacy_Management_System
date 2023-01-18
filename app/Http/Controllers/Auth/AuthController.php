@@ -44,7 +44,7 @@ public function registration_form_submit(Request $request){
         'email' => $request->email,
         'password'  => $request->password
     ]);
-    return back();
+    return redirect(url('login_form'));
 
 }
 
