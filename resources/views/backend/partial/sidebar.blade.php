@@ -54,6 +54,14 @@
   </li><!-- End Dashboard Nav -->
 
   
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('stoke_create')}}">
+      <i class="bi bi-grid"></i>
+      <span>Stoke</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  
 
 
 

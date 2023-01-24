@@ -34,4 +34,9 @@ public function Purchase_view(){
     $Purchases = Phurchase::all();
     return view('backend.pages.purchaseForm-m.purchaseList',compact('Purchases'));
 }
+public function (){
+    Phurchase::find($id)->delete();
+
+    return back();
+}
 }

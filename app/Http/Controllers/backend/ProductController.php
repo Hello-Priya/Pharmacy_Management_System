@@ -61,7 +61,7 @@ public function Edit_form($id){
 }
 
 public function Update_form(Request $request , $id){
-    $ProductUpdate =Product::find($id);
+    $ProductUpdate = Product::find($id);
     $ProductUpdate->update([
      
     

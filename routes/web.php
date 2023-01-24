@@ -10,6 +10,7 @@ use Illuminate\Routing\Controllers\Middleware;
 use App\Http\Controllers\backend\CompanyController;
 use App\Http\Controllers\backend\CustomerController;
 use App\Http\Controllers\backend\PaymentController;
+use App\Http\Controllers\backend\StockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,6 +102,18 @@ Route::get('/view_form',[PaymentController::class,'view_form'])-> name('view_for
 Route::get('/delete_Form/{id}',[PaymentController::class,'delete_form'])-> name('delete_form');
 Route::get('/editForm/{id}',[PaymentController::class,'edit_form'])-> name('edit_form');
 Route::put('/Update_submit/{id}',[PaymentController::class,'Update_submit'])-> name('Update_submit');
+
+
+                                                            //Stoke:
+Route::get('/stokeForm',[StockController::class,'Stoke'])->name('stoke');                                                            
+Route::POST('/database_stokeForm',[StockController::class,'Database_form'])->name('Database_form');                                                            
+
+Route::get('/stoke_create',[StockController::class,'stoke_create'])->name('stoke_create');                                                            
+Route::get('/stoke_delete/{id}',[StockController::class,'stoke_delete'])->name('stoke_delete');                                                      
+Route::get('/stoke_edit/{id}',[StockController::class,'stokeEdit'])->name('stoke_edit');
+Route::put('/stoke_update/{id}',[StockController::class,'stoke_update'])->name('stoke_update');
+
+
 
 
 });
