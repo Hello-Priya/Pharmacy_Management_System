@@ -69,7 +69,7 @@ public function Update(Request $request , $id){
     'In_Stock' => $request->In_Stock,
     'Stock_Out' => $request->Stock_Out
   ]);
-  return redirect()->route('create'); 
+  return redirect()->route('create_form'); 
 
 }
 }

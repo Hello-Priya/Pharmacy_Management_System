@@ -11,6 +11,8 @@ use App\Http\Controllers\backend\CompanyController;
 use App\Http\Controllers\backend\CustomerController;
 use App\Http\Controllers\backend\PaymentController;
 use App\Http\Controllers\backend\StockController;
+use App\Http\Controllers\backend\ReportController;
+use App\Http\Controllers\backend\SaleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,7 +74,9 @@ Route::get('/Purchase_Form',[PurchaseController::class,'Manufactures'])-> name('
 Route::POST('/Database_Purchase',[PurchaseController::class,'Purchase'])-> name('Purchase_data');
 
 Route::get('/Purchase_viewForm',[PurchaseController::class,'Purchase_view'])-> name('Purchase_view');
-
+Route::get('/Purchase_deleteForm/{id}',[PurchaseController::class,'Purchase_deleteForm'])-> name('Purchase_deleteForm');
+Route::get('/Purchase_EditForm/{id}',[PurchaseController::class,'Purchase_EditForm'])-> name('Purchase_EditForm');
+Route::put('/Purchase_updateForm/{id}',[PurchaseController::class,'Purchase_updateForm'])-> name('Purchase_updateForm');
 
                                     //Company/brand:
 
@@ -112,6 +116,28 @@ Route::get('/stoke_create',[StockController::class,'stoke_create'])->name('stoke
 Route::get('/stoke_delete/{id}',[StockController::class,'stoke_delete'])->name('stoke_delete');                                                      
 Route::get('/stoke_edit/{id}',[StockController::class,'stokeEdit'])->name('stoke_edit');
 Route::put('/stoke_update/{id}',[StockController::class,'stoke_update'])->name('stoke_update');
+
+
+                                            //Report:
+
+ Route::get('/reportForm',[ReportController::class,'Report_form'])->name('report_form');
+ Route::post('/database-report_Form',[ReportController::class,'database_Report_form'])->name('database_report_form');
+
+ Route::get('/Report_create',[ReportController::class,'Report_Create'])->name('report_create');
+ Route::get('/Report_delete/{id}',[ReportController::class,'Report_Delete'])->name('report_delete');
+ Route::get('/Report_edit/{id}',[ReportController::class,'Report_Edit'])->name('report_edit');
+ Route::put('/Report_update/{id}',[ReportController::class,'Report_Update'])->name('report_update');
+                         
+
+                                                //Sale:
+
+Route::get('/saleForm',[SaleController::class,'sale_form'])->name('sale_form');
+Route::post('/database_saleForm',[SaleController::class,'database_sale_form'])->name('database_sale_form');                                                  
+
+Route::get('/Sale_create',[SaleController::class,'Sale_Create'])->name('Sale_Create');                                                  
+Route::get('/Sale-delete/{id}',[SaleController::class,'Sale_delete'])->name('Sale_delete');                                                  
+Route::get('/Sale-view/{id}',[SaleController::class,'Sale_view'])->name('Sale_view');                                                  
+Route::put('/Sale-update/{id}',[SaleController::class,'Sale_update'])->name('Sale_update');                                                  
 
 
 

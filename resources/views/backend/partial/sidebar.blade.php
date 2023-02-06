@@ -61,6 +61,20 @@
     </a>
   </li><!-- End Dashboard Nav -->
 
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('report_create')}}">
+      <i class="bi bi-grid"></i>
+      <span>Report</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link " href="{{route('Sale_Create')}}">
+      <i class="bi bi-grid"></i>
+      <span>Sale</span>
+    </a>
+  </li><!-- End Dashboard Nav -->
+
   
 
 
